@@ -7,7 +7,7 @@ using Sinatra and the [Nexmo Text-To-Speech API](https://docs.nexmo.com/voice/te
 
 ## Subscriptions
 
-The [basic-subscriptions](../../tree/basic-subscriptions) branch is the starting point of the tutorial and is just a simple Sinatra app that allows a person to
+The [subscriptions](../../tree/subscriptions) branch is the starting point of the tutorial and is just a simple Sinatra app that allows a person to
 subscribe to alerts with their name, postcode, and phone number.
 
 ### Usage
