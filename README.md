@@ -1,4 +1,4 @@
-# Nexmo Sinatra Voice Broadcast System
+# Nexmo Sinatra Voice Alerts Broadcast System
 
 A demo that implements broadcast alerts in Ruby
 using Sinatra and the [Nexmo Text-To-Speech API](https://docs.nexmo.com/voice/text-to-speech).
