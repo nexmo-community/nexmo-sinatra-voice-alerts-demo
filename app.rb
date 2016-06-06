@@ -37,3 +37,36 @@ end
 get '/admin' do
   erb :admin
 end
+
+# send an alert to the provided phone number or postcode
+post '/alert' do
+  if params[:number]
+    send_alert(:number, params[:number])
+  elsif params[:postcode]
+    send_alert(:postcode, params[:postcode])
+  end
+  redirect '/alert'
+end
+
+# confirmation page for sending an alert
+get '/alert' do
+  erb :alert
+end
+
+private
+
+def send_alert key, value
+  Subscriber.where(key => value).each do |subscriber|
+    Nexmo::Client.new.initiate_tts_call(
+      to:     subscriber.number,
+      from:   ENV['NEXMO_PHONE_NUMBER'],
+      text:   %{
+        <break time="1s"/> Hello #{subscriber.name}.
+        This is a flood alert for
+        <prosody rate="-50%">#{subscriber.postcode}</prosody>.
+        Thank you for using Nexmo.
+      },
+      lg:     'en-gb'
+    )
+  end
+end

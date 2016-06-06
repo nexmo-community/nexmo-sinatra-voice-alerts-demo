@@ -20,3 +20,23 @@
     <% end %>
   </tbody>
 </table>
+
+<h2 class='header'>Send an alert</h2>
+
+<form class="form form-vertical" action="/alert" method="post">
+  <div class="form-group form-inline">
+    <select class="form-control" name="number">
+      <option disabled selected value> -- select a number -- </option>
+      <% Subscriber.pluck(:number).sort.each do |number| %>
+        <option><%= number %></option>
+      <% end %>
+    </select> or
+    <select class="form-control" name="postcode">
+      <option disabled selected value> -- select a postcode -- </option>
+      <% Subscriber.pluck(:postcode).sort.each do |postcode| %>
+        <option><%= postcode %></option>
+      <% end %>
+    </select>
+  </div>
+  <input type='submit' value='Send' class='btn btn-primary'>
+</form>
