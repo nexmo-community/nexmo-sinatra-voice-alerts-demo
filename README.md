@@ -3,6 +3,8 @@
 A demo that implements broadcast alerts in Ruby
 using Sinatra and the [Nexmo Text-To-Speech API](https://docs.nexmo.com/voice/text-to-speech).
 
+![Nexmo Flood Alerts](images/screenshot.png)
+
 ## Subscriptions
 
 The [basic-subscriptions](../../tree/basic-subscriptions) branch is the starting point of the tutorial and is just a simple Sinatra app that allows a person to
