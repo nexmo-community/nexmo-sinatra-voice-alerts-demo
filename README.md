@@ -32,7 +32,8 @@ and in our in-dept tutorial.
 * Run `git checkout alerts`
 * Run `bundle install`
 * Run `bundle exec rake db:migrate`
-* Copy `.env.example` to `.env` and add your [Nexmo API key and secret](https://dashboard.nexmo.com/settings)
+* Copy `.env.example` to `.env` and add your [Nexmo API key and secret](https://dashboard.nexmo.com/settings), and a Nexmo voice enabled phone
+number
 * Run `ruby app.rb`
 * Visit [http://localhost:4567](http://localhost:4567)
 * Subscribe a number
