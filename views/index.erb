@@ -2,15 +2,24 @@
   Register for Flood Alerts
 <% end %>
 
+<%
+  fields = {
+    name: 'John Doe',
+    postcode: 'E1',
+    number: '447555666777'
+  }
+%>
+
 <form class='form form-vertical' action='/subscribe' method='post'>
-  <% [:name, :postcode, :number].each do |field| %>
+  <% fields.each do |field, placeholder| %>
   <div class='form-group <%= 'has-error' unless @subscriber.errors[field].empty? %>'>
     <label for='name'><%= field.capitalize %></label>
     <input type='text'
            name='<%= field %>'
            value='<%= @subscriber.send(field) %>'
            class='form-control'
-           required='true'>
+           required='true'
+           placeholder='<%= placeholder %>'>
     <span class='help-block'><%= @subscriber.errors[field].first %></span>
   </div>
   <% end %>
