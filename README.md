@@ -1,6 +1,6 @@
 # Nexmo Sinatra Voice Alerts Broadcast System
 
-A demo that implements broadcast alerts in Ruby
+A demo that implements a Voice Alerts Broadcast System in Ruby
 using Sinatra and the [Nexmo Text-To-Speech API](https://docs.nexmo.com/voice/text-to-speech).
 
 ![Nexmo Flood Alerts](images/screenshot.png)
