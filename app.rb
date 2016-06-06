@@ -1,6 +1,12 @@
+# load the .env file
+require 'dotenv'
+Dotenv.load
+
 require 'sinatra'
 require 'sinatra/content_for'
 require 'sinatra/activerecord'
+# we're using nexmo to send our voice messages
+require 'nexmo'
 
 # set up our Subscriber database model
 require './models/subscriber'
