@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sinatra/content_for'
 require 'sinatra/activerecord'
 
 # set up our Subscriber database model
