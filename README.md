@@ -13,9 +13,10 @@ subscribe to alerts with their name, postcode, and phone number.
 * Clone this repository
 * Run `git checkout subscriptions`
 * Run `bundle install`
+* Run `bundle exec rake db:migrate`
 * Run `ruby app.rb`
 * Visit [http://localhost:4567](http://localhost:4567)
-* Register and login
+* Subscribe a number
 
 ## Broadcast Alerts
 
@@ -30,6 +31,7 @@ and in our in-dept tutorial.
 * Clone this repository
 * Run `git checkout alerts`
 * Run `bundle install`
+* Run `bundle exec rake db:migrate`
 * Copy `.env.example` to `.env` and add your [Nexmo API key and secret](https://dashboard.nexmo.com/settings)
 * Run `ruby app.rb`
 * Visit [http://localhost:4567](http://localhost:4567)
